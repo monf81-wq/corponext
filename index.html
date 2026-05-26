@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CorpoNext — Informação real sobre Mounjaro e emagrecimento para quem já tentou de tudo. Descubra como a tirzepatida pode mudar sua história.">
+<title>CorpoNext — Nova geração do emagrecimento inteligente</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --azul: #1a4fa0;
+    --azul-claro: #2d6fd4;
+    --azul-neon: #5b9cf6;
+    --creme: #f0f5ff;
+    --creme-escuro: #dce8f8;
+    --azul-escuro: #0d1f4a;
+    --azul-medio: #1e3a7a;
+    --dourado: #3b82f6;
+    --dourado-claro: #60a5fa;
+    --branco: #f8faff;
+    --cinza-suave: #6b7a99;
+    --texto: #0d1a35;
+    --texto-suave: #3a4a6b;
+  --verde-destaque: #00A880;
+  --verde-hover: #27B3B8;
+    --sombra: rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--branco);
+    color: var(--texto);
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: transparent;
+    backdrop-filter: none;
+    border-bottom: none;
+    padding: 0 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--azul);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .logo-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .logo-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 18px;
+    color: var(--azul);
+    letter-spacing: -0.5px;
+  }
+
+  .logo-tagline {
+    font-size: 9px;
+    font-weight: 500;
+    color: var(--cinza-suave);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .nav-menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .nav-menu-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .nav-links-desktop {
+    display: none;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links-desktop a {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links-desktop a:hover { color: var(--verde-destaque); }
+
+  /* Mobile drawer */
+  .nav-drawer {
+    position: fixed;
+    top: 60px; right: 0;
+    width: min(280px, 80vw);
+    height: calc(100vh - 60px);
+    background: var(--branco);
+    border-left: 1px solid var(--creme-escuro);
+    padding: 2rem 1.5rem;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 99;
+    box-shadow: -8px 0 32px rgba(0,0,0,0.08);
+  }
+
+  .nav-drawer.open { transform: translateX(0); }
+
+  .nav-drawer ul { list-style: none; }
+
+  .nav-drawer a {
+    display: block;
+    padding: 0.9rem 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--texto);
+    text-decoration: none;
+    border-bottom: 1px solid var(--creme-escuro);
+    transition: color 0.2s;
+  }
+
+  .nav-drawer a:hover { color: var(--verde-destaque); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100svh;
+    background: linear-gradient(160deg, #071a3e 0%, #1a4fa0 45%, #0a1628 100%);
+    padding: 80px 1.25rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(91,156,246,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(91,156,246,0.15);
+    border: 1px solid rgba(91,156,246,0.3);
+    color: var(--azul-neon);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+    width: fit-content;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--verde-destaque);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: clamp(2.2rem, 8vw, 3.8rem);
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: #00A880;
+  }
+
+  .hero-sub {
+    font-size: clamp(1rem, 3.5vw, 1.2rem);
+    color: rgba(255,255,255,0.75);
+    font-weight: 300;
+    max-width: 500px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--verde-destaque);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 1rem 1.75rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    letter-spacing: -0.2px;
+  }
+
+  .btn-primary:hover {
+    background: #3b82f6;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(59,130,246,0.3);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #00A880;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0.9rem 1.75rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: none;
+  }
+
+  .btn-secondary:hover {
+    background: #27B3B8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,168,128,0.3);
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .hero-stat {
+    text-align: center;
+    padding: 0.8rem 0.5rem;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+  }
+
+  .hero-stat-num {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--verde-destaque);
+    display: block;
+    line-height: 1.1;
+  }
+
+  .hero-stat-label {
+    font-size: 10px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-top: 3px;
+  }
+
+  /* ── EMOTIONAL HOOK ── */
+  .emotional {
+    background: var(--creme);
+    padding: 3.5rem 1.25rem;
+    position: relative;
+  }
+
+  .emotional-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(1.3rem, 5vw, 2rem);
+    color: #0d1f4a;
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    position: relative;
+  }
+
+  .emotional-quote::before {
+    content: '"';
+    font-size: 5rem;
+    color: var(--azul-claro);
+    opacity: 0.25;
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+    line-height: 1;
+    font-style: normal;
+  }
+
+  .emotional-body {
+    font-size: 1.05rem;
+    color: var(--texto-suave);
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto 2rem;
+    line-height: 1.75;
+  }
+
+  .emotional-body strong {
+    color: var(--verde-destaque);
+    font-weight: 600;
+  }
+
+  .divider-leaf {
+    text-align: center;
+    margin: 0.5rem 0 2rem;
+    color: var(--azul-claro);
+    opacity: 0.5;
+  }
+
+  /* ── SECTION HEADERS ── */
+  .section-label {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--verde-destaque);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 5.5vw, 2.4rem);
+    color: #0d1f4a;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--verde-destaque);
+  }
+
+  .section-body {
+    font-size: 1.05rem;
+    color: var(--texto-suave);
+    line-height: 1.75;
+    margin-bottom: 2rem;
+  }
+
+  /* ── IMC CALCULATOR ── */
+  .imc-section {
+    padding: 3.5rem 1.25rem;
+    background: var(--branco);
+  }
+
+  .imc-card {
+    background: var(--azul);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .imc-card::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+  }
+
+  .imc-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+
+  .imc-card p {
+    font-size: 0.9rem;
+    opacity: 0.75;
+    margin-bottom: 1.5rem;
+  }
+
+  .imc-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .imc-field label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 5px;
+  }
+
+  .imc-field input {
+    width: 100%;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 10px;
+    padding: 0.7rem 0.9rem;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'DM Sans', sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .imc-field input::placeholder { opacity: 0.5; }
+
+  .imc-field input:focus {
+    border-color: var(--azul-neon);
+    background: rgba(255,255,255,0.2);
+  }
+
+  .btn-imc {
+    width: 100%;
+    background: #00A880;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 0.9rem;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: -0.2px;
+  }
+
+  .btn-imc:hover {
+    background: #27B3B8;
+    transform: translateY(-1px);
+  }
+
+  .imc-result {
+    display: none;
+    margin-top: 1.25rem;
+    background: rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 1.25rem;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .imc-result.show { display: block; }
+
+  .imc-result-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--verde-destaque);
+    display: block;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .imc-result-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .imc-result-text {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    line-height: 1.5;
+  }
+
+  /* ── TOPICS GRID ── */
+  .topics-section {
+    padding: 3.5rem 1.25rem;
+    background: var(--creme);
+  }
+
+  .topics-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .topic-card {
+    background: var(--branco);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    border: 1px solid var(--creme-escuro);
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .topic-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--verde-destaque);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .topic-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+    border-color: var(--verde-destaque);
+  }
+
+  .topic-card:hover::after { transform: scaleX(1); }
+
+  .topic-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .topic-icon.green { background: rgba(26,92,62,0.1); }
+  .topic-icon.gold { background: rgba(59,130,246,0.12); }
+  .topic-icon.warm { background: rgba(13,31,74,0.06); }
+
+  .topic-content { flex: 1; }
+
+  .topic-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--verde-destaque);
+    margin-bottom: 0.3rem;
+    display: block;
+  }
+
+  .topic-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #0d1f4a;
+    margin-bottom: 0.35rem;
+    line-height: 1.3;
+  }
+
+  .topic-desc {
+    font-size: 0.88rem;
+    color: var(--texto-suave);
+    line-height: 1.5;
+  }
+
+  .topic-arrow {
+    align-self: center;
+    font-size: 1.2rem;
+    color: var(--cinza-suave);
+    transition: transform 0.2s;
+  }
+
+  .topic-card:hover .topic-arrow { transform: translateX(4px); }
+
+  /* ── HOW IT WORKS ── */
+  .how-section {
+    padding: 3.5rem 1.25rem;
+    background: var(--branco);
+  }
+
+  .steps-list {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .step {
+    display: flex;
+    gap: 1.2rem;
+    padding-bottom: 2rem;
+    position: relative;
+  }
+
+  .step:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 44px;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--azul-claro), transparent);
+  }
+
+  .step-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--verde-destaque);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-body { flex: 1; padding-top: 0.6rem; }
+
+  .step-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #0d1f4a;
+    margin-bottom: 0.4rem;
+  }
+
+  .step-text {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+    line-height: 1.6;
+  }
+
+  /* ── EMOTIONAL STORY ── */
+  .story-section {
+    padding: 3.5rem 1.25rem;
+    background: var(--azul-escuro);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .story-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #60a5fa, transparent);
+  }
+
+  .story-section .section-label { color: var(--azul-neon); }
+
+  .story-section .section-title { color: #fff; }
+  .story-section .section-title em { color: #00A880; }
+
+  .story-section .section-title em { color: var(--azul-neon); }
+
+  .story-section .section-body { color: rgba(255,255,255,0.72); }
+
+  .story-callout {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-left: 3px solid #60a5fa;
+    border-radius: 0 12px 12px 0;
+    padding: 1.25rem 1.25rem;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.65;
+  }
+
+  .story-callout strong {
+    color: var(--azul-neon);
+    font-weight: 600;
+  }
+
+  /* ── FAQ ── */
+  .faq-section {
+    padding: 3.5rem 1.25rem;
+    background: var(--creme);
+  }
+
+  .faq-list {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .faq-item {
+    background: var(--branco);
+    border: 1px solid var(--creme-escuro);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    text-align: left;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.97rem;
+    font-weight: 600;
+    color: #0d1f4a;
+    line-height: 1.4;
+    transition: background 0.2s;
+  }
+
+  .faq-question:hover { background: var(--creme); }
+
+  .faq-chevron {
+    font-size: 1.1rem;
+    color: var(--verde-destaque);
+    transition: transform 0.3s;
+    flex-shrink: 0;
+  }
+
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .faq-item.open .faq-answer { max-height: 500px; }
+
+  .faq-answer-inner {
+    padding: 0 1.25rem 1.25rem;
+    font-size: 0.92rem;
+    color: var(--texto-suave);
+    line-height: 1.7;
+  }
+
+  .faq-answer-inner strong {
+    color: var(--verde-destaque);
+    font-weight: 600;
+  }
+
+  /* ── DISCLAIMER STRIP ── */
+  .disclaimer-strip {
+    background: rgba(26,79,160,0.06);
+    border-top: 1px solid rgba(26,79,160,0.15);
+    border-bottom: 1px solid rgba(26,79,160,0.15);
+    padding: 1rem 1.25rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    margin: 0;
+  }
+
+  .disclaimer-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+
+  .disclaimer-text {
+    font-size: 0.8rem;
+    color: var(--texto-suave);
+    line-height: 1.5;
+  }
+
+  .disclaimer-text strong { color: var(--verde-destaque); font-weight: 600; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--azul-escuro);
+    color: rgba(255,255,255,0.65);
+    padding: 2.5rem 1.25rem 3rem;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-logo-icon {
+    width: 40px; height: 40px;
+    background: var(--azul);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-logo-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+  }
+
+  .footer-desc {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+    max-width: 400px;
+  }
+
+  .footer-links-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--azul-neon);
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-links {
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+
+  .footer-links li { margin-bottom: 0.5rem; }
+
+  .footer-links a {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--verde-destaque); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1.25rem;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.35);
+    line-height: 1.6;
+  }
+
+  /* ── DESKTOP ── */
+  @media (min-width: 768px) {
+    .nav-menu-btn { display: none; }
+    .nav-links-desktop { display: flex; }
+    .nav-drawer { display: none; }
+
+    .hero {
+      padding: 100px 3rem 4rem;
+      min-height: 90vh;
+    }
+
+    .hero h1 { max-width: 640px; }
+    .hero-sub { max-width: 520px; }
+
+    .hero-cta-group {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .hero-stats {
+      max-width: 440px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .emotional { padding: 4.5rem 3rem; }
+    .imc-section { padding: 4.5rem 3rem; }
+
+    .imc-card {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .topics-section { padding: 4.5rem 3rem; }
+
+    .topics-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .how-section { padding: 4.5rem 3rem; }
+
+    .steps-list { max-width: 580px; }
+
+    .story-section { padding: 4.5rem 3rem; }
+    .faq-section { padding: 4.5rem 3rem; }
+
+    footer { padding: 3.5rem 3rem 4rem; }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    nav { padding: 0 4rem; }
+    .hero { padding: 110px 4rem 4rem; }
+    .emotional,
+    .imc-section,
+    .topics-section,
+    .how-section,
+    .story-section,
+    .faq-section { padding: 5rem 4rem; }
+    footer { padding: 4rem 4rem 5rem; }
+
+    .topics-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .hero-stats { max-width: 480px; }
+  }
+
+  /* animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .logo-img {
+    height: 58px;
+    width: auto;
+    display: block;
+    /* logo has transparent bg - works on light nav */
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.15));
+  }
+
+  .hero-logo-wrap {
+    margin-bottom: 1.5rem;
+  }
+  .hero-logo-img {
+    height: 80px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 4px 16px rgba(0,0,0,0.35)) brightness(1.08);
+  }
+  @media (min-width: 768px) {
+    .hero-logo-img { height: 100px; }
+  }
+
+  nav.scrolled {
+    background: rgba(10,22,40,0.97) !important;
+    backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  }
+
+
+
+  
+  /* Breaking news card */
+  .hero-product { display: none; }
+
+  .breaking-card {
+    display: block;
+    text-decoration: none;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s;
+    backdrop-filter: blur(8px);
+    animation: floatProduct 5s ease-in-out infinite;
+  }
+
+  @keyframes floatProduct {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .breaking-card:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: #00A880;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 0 1px #00A880;
+    transform: translateY(-4px) !important;
+  }
+
+  .breaking-card-header {
+    background: #dc2626;
+    padding: 0.6rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .breaking-dot {
+    width: 8px; height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    animation: blink 1s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes blink {
+    0%,100% { opacity: 1; } 50% { opacity: 0.3; }
+  }
+
+  .breaking-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .breaking-card-body {
+    padding: 1.5rem 1.25rem 1.25rem;
+  }
+
+  .breaking-emoji {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .breaking-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 4vw, 1.65rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.5px;
+  }
+
+  .breaking-title em {
+    font-style: italic;
+    color: #00A880;
+  }
+
+  .breaking-desc {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .breaking-desc strong {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .breaking-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .breaking-tag {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(0,168,128,0.18);
+    border: 1px solid rgba(0,168,128,0.35);
+    color: #00e8b0;
+    letter-spacing: 0.3px;
+  }
+
+  .breaking-cta {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #00A880;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    letter-spacing: 0.2px;
+    transition: gap 0.2s;
+  }
+
+  .breaking-card:hover .breaking-cta { gap: 10px; }
+
+  @media (min-width: 900px) {
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      align-items: center;
+      gap: 2.5rem;
+      min-height: 100svh;
+      padding-top: 80px;
+    }
+    .hero-product {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-row: 1 / -1;
+      grid-column: 2;
+      align-self: center;
+      padding-right: 1rem;
+    }
+    .breaking-card { max-width: 380px; }
+  }
+
+  @media (min-width: 1024px) {
+    .hero { gap: 3rem; padding: 110px 4rem 4rem; }
+    .breaking-card { max-width: 400px; }
+  }
+    .hero { gap: 3rem; padding: 110px 4rem 4rem; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+
+
+  <ul class="nav-links-desktop">
+    <li><a href="#funciona">Como funciona</a></li>
+    <li><a href="#temas">Conteúdos</a></li>
+    <li><a href="#faq">Dúvidas</a></li>
+    <li><a href="quanto-custa.html" target="_blank">Preço</a></li>
+  </ul>
+
+  <button class="nav-menu-btn" id="menuBtn" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-drawer" id="navDrawer">
+  <ul>
+    <li><a href="#funciona" onclick="closeMenu()">Como funciona</a></li>
+    <li><a href="#temas" onclick="closeMenu()">Conteúdos</a></li>
+    <li><a href="#imc" onclick="closeMenu()">Calcule seu IMC</a></li>
+    <li><a href="#faq" onclick="closeMenu()">Dúvidas frequentes</a></li>
+    <li><a href="quanto-custa.html" target="_blank" onclick="closeMenu()">Preço do Mounjaro</a></li>
+    <li><a href="ozivy-semaglutida-anvisa.html" onclick="closeMenu()" style="color:#ef4444;font-weight:700">🔴 Ozivy — ANVISA (novo)</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+  <div class="hero-logo-wrap">
+    <img src="logo.png" alt="CorpoNext" class="hero-logo-img">
+  </div>
+  <span class="hero-eyebrow">🔴 ANVISA aprova análogo nacional da semaglutida — 26/05/2026</span>
+
+  <h1>Você não falhou.<br>Seu corpo precisava de <em>outra estratégia.</em></h1>
+
+  <p class="hero-sub">
+    Para quem já tentou dieta, academia e voltou ao ponto de partida: entenda como o Mounjaro age diferente de tudo que você já experimentou.
+  </p>
+
+  <div class="hero-cta-group">
+    <a href="#funciona" class="btn-primary">
+      Como o Mounjaro funciona →
+    </a>
+    <a href="#imc" class="btn-secondary">
+      Calcular meu IMC
+    </a>
+  </div>
+
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="hero-stat-num">22%</span>
+      <span class="hero-stat-label">Perda de peso possível</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">2x</span>
+      <span class="hero-stat-label">Mais eficaz que Ozempic</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">FDA</span>
+      <span class="hero-stat-label">Aprovado globalmente</span>
+    </div>
+  </div>  </div>
+
+
+<div class="hero-product" aria-label="Notícia em destaque">
+  <a href="ozivy-semaglutida-anvisa.html" class="breaking-card">
+    <div class="breaking-card-header">
+      <span class="breaking-dot"></span>
+      <span class="breaking-label">BREAKING NEWS — 26/05/2026</span>
+    </div>
+    <div class="breaking-card-body">
+      <div class="breaking-emoji">💊</div>
+      <h2 class="breaking-title">ANVISA aprova o<br><em>primeiro análogo</em><br>nacional da semaglutida</h2>
+      <p class="breaking-desc">O laboratório EMS recebeu aprovação para o <strong>Ozivy</strong> — concorrente do Ozempic produzido no Brasil, após o fim da patente da Novo Nordisk em março de 2026.</p>
+      <div class="breaking-tags">
+        <span class="breaking-tag">🇧🇷 Produção nacional</span>
+        <span class="breaking-tag">📋 ANVISA</span>
+        <span class="breaking-tag">💉 Semaglutida</span>
+      </div>
+      <div class="breaking-cta">
+        Leia a análise completa <span>→</span>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+</section>
+
+<!-- EMOTIONAL HOOK -->
+<section class="emotional">
+  <p class="emotional-quote fade-in">
+    "Tentei de tudo. Cheguei a acreditar que era fraqueza minha."
+  </p>
+  <div class="divider-leaf">❧</div>
+  <p class="emotional-body fade-in">
+    Se você se identificou com essa frase, saiba que isso é mais comum do que você imagina — e tem uma explicação biológica. <strong>O problema nunca foi você.</strong> Seu corpo possui mecanismos hormonais que sabotam a perda de peso sem que você perceba. Dietas falham não por falta de vontade, mas porque não atuam nesses mecanismos. O Mounjaro age exatamente onde as dietas não chegam.
+  </p>
+</section>
+
+<!-- IMC CALCULATOR -->
+<section class="imc-section" id="imc">
+  <div class="imc-card fade-in">
+    <h2>Calcule seu IMC</h2>
+    <p>Descubra sua faixa de peso e entenda melhor sua situação atual.</p>
+
+    <div class="imc-inputs">
+      <div class="imc-field">
+        <label>Peso (kg)</label>
+        <input type="number" id="peso" placeholder="Ex: 95" min="30" max="300">
+      </div>
+      <div class="imc-field">
+        <label>Altura (cm)</label>
+        <input type="number" id="altura" placeholder="Ex: 168" min="100" max="250">
+      </div>
+    </div>
+
+    <button class="btn-imc" onclick="calcIMC()">Calcular meu IMC</button>
+
+    <div class="imc-result" id="imcResult">
+      <span class="imc-result-num" id="imcNum">—</span>
+      <div class="imc-result-label" id="imcLabel"></div>
+      <div class="imc-result-text" id="imcText"></div>
+    </div>
+  </div>
+  <p style="font-size:0.75rem; color:var(--cinza-suave); margin-top:0.75rem; text-align:center;">
+    Esta calculadora é apenas informativa e não substitui avaliação médica.
+  </p>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="funciona">
+  <span class="section-label">Mecanismo</span>
+  <h2 class="section-title">Por que o Mounjaro funciona quando<br>tudo o mais <em>falhou</em>?</h2>
+  <p class="section-body">
+    A resposta está em como ele age no seu corpo — de um jeito que nenhuma dieta ou exercício consegue replicar.
+  </p>
+
+  <div class="steps-list">
+    <div class="step fade-in">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <div class="step-title">Reduz a fome de verdade</div>
+        <p class="step-text">A tirzepatida (princípio ativo do Mounjaro) age nos receptores GIP e GLP-1, que controlam o apetite no cérebro. A fome que parecia incontrolável começa a diminuir de forma concreta já nas primeiras semanas.</p>
+      </div>
+    </div>
+
+    <div class="step fade-in">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <div class="step-title">Retarda o esvaziamento do estômago</div>
+        <p class="step-text">O alimento permanece mais tempo no estômago, aumentando a saciedade depois de refeições menores. Você come menos sem sentir que está se privando.</p>
+      </div>
+    </div>
+
+    <div class="step fade-in">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <div class="step-title">Melhora o metabolismo</div>
+        <p class="step-text">Regula a insulina e o processamento de gordura, contribuindo para uma composição corporal mais saudável ao longo do tratamento.</p>
+      </div>
+    </div>
+
+    <div class="step fade-in">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <div class="step-title">Resultados sustentáveis no longo prazo</div>
+        <p class="step-text">Diferente das dietas, que causam efeito sanfona ao desregular hormônios, o Mounjaro atua nos próprios hormônios — tornando a manutenção do peso muito mais viável.</p>
+      </div>
+    </div>
+  </div>
+
+  <a href="mounjaro-funciona.html" class="btn-primary" style="margin-top:1rem; display:inline-flex; text-decoration:none;">
+    Leia o artigo completo →
+  </a>
+</section>
+
+<!-- TOPICS GRID -->
+<section class="topics-section" id="temas">
+  <span class="section-label">Conteúdo</span>
+  <h2 class="section-title">O que você precisa<br><em>saber antes</em> de começar</h2>
+  <p class="section-body">
+    Artigos diretos, sem enrolação, escritos para quem está considerando o Mounjaro como próximo passo.
+  </p>
+
+  <div class="topics-grid">
+
+    <a href="ozivy-semaglutida-anvisa.html" class="topic-card" style="border-color:rgba(220,38,38,0.3);background:linear-gradient(135deg,rgba(220,38,38,0.04),rgba(255,255,255,1))">
+      <div class="topic-icon" style="background:rgba(220,38,38,0.08)">🔴</div>
+      <div class="topic-content">
+        <span class="topic-tag" style="color:#dc2626">Breaking — 26/05/2026</span>
+        <div class="topic-title">ANVISA aprova o Ozivy — o 1º análogo nacional da semaglutida</div>
+        <p class="topic-desc">Laboratório EMS recebe aprovação após fim da patente da Novo Nordisk. O que muda para você.</p>
+      </div>
+      <span class="topic-arrow">›</span>
+    </a>
+
+    <a href="mounjaro-funciona.html" class="topic-card">
+      <div class="topic-icon green">🔬</div>
+      <div class="topic-content">
+        <span class="topic-tag">Eficácia</span>
+        <div class="topic-title">Mounjaro realmente funciona?</div>
+        <p class="topic-desc">Resultados reais, mecanismo de ação e o que esperar nas primeiras semanas.</p>
+      </div>
+      <span class="topic-arrow">›</span>
+    </a>
+
+    <a href="quanto-custa.html" class="topic-card">
+      <div class="topic-icon gold">💰</div>
+      <div class="topic-content">
+        <span class="topic-tag">Custo</span>
+        <div class="topic-title">Quanto custa o Mounjaro em 2026?</div>
+        <p class="topic-desc">Preços atualizados, candles de compra e como avaliar se cabe no seu bolso.</p>
+      </div>
+      <span class="topic-arrow">›</span>
+    </a>
+
+    <a href="efeitos-colaterais.html" class="topic-card">
+      <div class="topic-icon warm">⚠️</div>
+      <div class="topic-content">
+        <span class="topic-tag">Segurança</span>
+        <div class="topic-title">Efeitos colaterais da tirzepatida</div>
+        <p class="topic-desc">O que é normal na adaptação, o que merece atenção e como minimizar desconfortos.</p>
+      </div>
+      <span class="topic-arrow">›</span>
+    </a>
+
+    <a href="quantos-kg.html" class="topic-card">
+      <div class="topic-icon green">📉</div>
+      <div class="topic-content">
+        <span class="topic-tag">Resultados</span>
+        <div class="topic-title">Quantos kg dá pra perder?</div>
+        <p class="topic-desc">Resultados em 30, 60 e 90 dias com base em estudos e relatos reais.</p>
+      </div>
+      <span class="topic-arrow">›</span>
+    </a>
+
+    <a href="mounjaro-vs-ozempic.html" class="topic-card">
+      <div class="topic-icon gold">⚖️</div>
+      <div class="topic-content">
+        <span class="topic-tag">Comparativo</span>
+        <div class="topic-title">Mounjaro vs Ozempic</div>
+        <p class="topic-desc">Qual faz mais sentido para o seu perfil? Diferenças de mecanismo, preço e resultado.</p>
+      </div>
+      <span class="topic-arrow">›</span>
+    </a>
+
+    <a href="receita.html" class="topic-card">
+      <div class="topic-icon warm">📋</div>
+      <div class="topic-content">
+        <span class="topic-tag">Acesso</span>
+        <div class="topic-title">Precisa de receita médica?</div>
+        <p class="topic-desc">Como conseguir o medicamento de forma legal e segura no Brasil.</p>
+      </div>
+      <span class="topic-arrow">›</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- EMOTIONAL STORY -->
+<section class="story-section">
+  <span class="section-label">Para quem está cansado de tentar</span>
+  <h2 class="section-title">Você não está <em>fraco.</em><br>Você está lutando contra biologia.</h2>
+
+  <p class="section-body">
+    Existe um padrão que se repete na vida de quem luta com o peso há anos: começa a dieta, perde alguns quilos, sente esperança — e então o corpo reage. A fome aumenta. O metabolismo desacelera. A vontade por comida cresce de um jeito que parece impossível de controlar.
+  </p>
+
+  <div class="story-callout">
+    <strong>Isso não é fraqueza.</strong> É uma resposta biológica chamada "termogênese adaptativa" — o corpo interpreta a restrição calórica como ameaça e ativa mecanismos para recuperar o peso perdido. Esse processo é documentado pela ciência e acontece na maioria das pessoas que fazem dieta.
+  </div>
+
+  <p class="section-body">
+    O Mounjaro não é uma solução mágica. Mas ele é a primeira classe de medicamentos que atua diretamente nos hormônios responsáveis por esse ciclo — quebendo um padrão que a força de vontade sozinha não consegue quebrar. Se você já tentou de tudo, isso não é motivo de vergonha. É motivo para considerar uma abordagem diferente.
+  </p>
+
+  <a href="mounjaro-funciona.html" class="btn-primary" style="display:inline-flex; text-decoration:none;">
+    Entender melhor →
+  </a>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <span class="section-label">Dúvidas frequentes</span>
+  <h2 class="section-title">As perguntas que todo mundo<br><em>tem medo</em> de fazer</h2>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Mounjaro funciona para todo mundo?
+        <span class="faq-chevron">▾</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Não da mesma forma. Os resultados variam de pessoa para pessoa, dependendo de fatores como peso inicial, alimentação, presença de diabetes tipo 2 e como o organismo responde ao medicamento. <strong>A maioria das pessoas em estudos clínicos perdeu entre 10% e 22% do peso corporal</strong>, mas isso não é garantia individual. O acompanhamento médico é essencial para avaliar se faz sentido para o seu caso.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Vou ter efeitos colaterais?
+        <span class="faq-chevron">▾</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Os efeitos mais comuns são náuseas, desconforto gastrointestinal e diminuição do apetite — especialmente nas primeiras semanas. <strong>A maioria das pessoas passa por uma fase de adaptação que vai melhorando com o tempo.</strong> Efeitos mais sérios são raros, mas existem e devem ser discutidos com seu médico antes de iniciar o tratamento.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Preciso fazer dieta junto com o Mounjaro?
+        <span class="faq-chevron">▾</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Não precisa seguir uma dieta rígida, mas <strong>quem combina o medicamento com mudanças alimentares tem resultados significativamente melhores.</strong> A boa notícia é que o próprio Mounjaro reduz a fome e a compulsão, tornando muito mais fácil fazer escolhas mais saudáveis — sem a sensação de privação que dietas tradicionais causam.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        O peso volta quando eu parar de usar?
+        <span class="faq-chevron">▾</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Esse é um ponto importante e honesto: <strong>pode voltar</strong>, especialmente se os hábitos alimentares não mudaram durante o tratamento. Estudos mostram que parte do peso tende a retornar após a interrupção. Por isso, o medicamento é mais eficaz quando usado como ferramenta de transição, ajudando a criar novos padrões alimentares que possam ser mantidos depois.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Como consigo o Mounjaro legalmente?
+        <span class="faq-chevron">▾</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          O Mounjaro exige receita médica no Brasil. <strong>Você precisa passar por uma consulta com endocrinologista ou clínico geral</strong> que avalie se o medicamento é indicado para o seu caso. Não compre de fontes não autorizadas — produtos falsificados ou sem controle de qualidade representam risco real à saúde.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Mounjaro causa flacidez?
+        <span class="faq-chevron">▾</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Perda de peso rápida pode causar alguma flacidez — isso acontece com qualquer método de emagrecimento acelerado, não apenas com Mounjaro. <strong>Exercícios de resistência (musculação) durante o tratamento ajudam muito a preservar a massa muscular</strong> e minimizar esse efeito. A velocidade da perda de peso também influencia: quem perde mais gradualmente tende a ter menos flacidez.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer-strip">
+  <span class="disclaimer-icon">🩺</span>
+  <p class="disclaimer-text">
+    <strong>Aviso importante:</strong> As informações deste site têm caráter educativo e informativo. Não substituem consulta, diagnóstico ou prescrição médica. Sempre consulte um profissional de saúde antes de iniciar qualquer tratamento.
+  </p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">
+        <img src="logo.png" alt="CorpoNext" style="height:52px;width:auto;filter:brightness(1.1) drop-shadow(0 2px 6px rgba(0,0,0,0.3))">
+      </div>
+      <p class="footer-desc">
+        Informação séria sobre emagrecimento com Mounjaro para quem já tentou de tudo. Conteúdo educativo, sem venda de medicamentos.
+      </p>
+    </div>
+
+    <div>
+      <div class="footer-links-title">Conteúdos</div>
+      <ul class="footer-links">
+        <li><a href="mounjaro-funciona.html">Mounjaro funciona?</a></li>
+        <li><a href="quanto-custa.html">Preço do Mounjaro</a></li>
+        <li><a href="efeitos-colaterais.html">Efeitos colaterais</a></li>
+        <li><a href="quantos-kg.html">Quantos kg perder?</a></li>
+        <li><a href="mounjaro-vs-ozempic.html">Mounjaro vs Ozempic</a></li>
+        <li><a href="receita.html">Receita médica</a></li>
+        <li><a href="ozivy-semaglutida-anvisa.html" style="color:#00e8b0;font-weight:600">🔴 Ozivy — Novidade</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-links-title">Institucional</div>
+      <ul class="footer-links">
+        <li><a href="sobre-nos.html">Sobre nós</a></li>
+        <li><a href="politica-privacidade.html">Política de privacidade</a></li>
+        <li><a href="disclaimer.html">Termos e disclaimer</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 CorpoNext. Todos os direitos reservados.<br>
+    As informações deste site são de caráter educativo e não substituem orientação médica profissional.
+  </div>
+</footer>
+
+<script>
+  // Menu mobile
+  const menuBtn = document.getElementById('menuBtn');
+  const navDrawer = document.getElementById('navDrawer');
+
+  menuBtn.addEventListener('click', () => {
+    navDrawer.classList.toggle('open');
+  });
+
+  function closeMenu() {
+    navDrawer.classList.remove('open');
+  }
+
+  document.addEventListener('click', (e) => {
+    if (!navDrawer.contains(e.target) && !menuBtn.contains(e.target)) {
+      navDrawer.classList.remove('open');
+    }
+  });
+
+  // IMC Calculator
+  function calcIMC() {
+    const peso = parseFloat(document.getElementById('peso').value);
+    const alturaCm = parseFloat(document.getElementById('altura').value);
+
+    if (!peso || !alturaCm || peso < 30 || alturaCm < 100) {
+      alert('Por favor, insira valores válidos para peso e altura.');
+      return;
+    }
+
+    const alturaM = alturaCm / 100;
+    const imc = peso / (alturaM * alturaM);
+    const imcFormatado = imc.toFixed(1);
+
+    let label, texto;
+
+    if (imc < 18.5) {
+      label = 'Abaixo do peso';
+      texto = 'Seu IMC indica baixo peso. Consulte um médico para avaliação individualizada.';
+    } else if (imc < 25) {
+      label = '✓ Peso saudável';
+      texto = 'Seu peso está dentro da faixa considerada saudável pela OMS.';
+    } else if (imc < 30) {
+      label = 'Sobrepeso';
+      texto = 'Um IMC nessa faixa já representa risco aumentado. Mudanças de hábito e acompanhamento médico são recomendados.';
+    } else if (imc < 35) {
+      label = 'Obesidade grau I';
+      texto = 'Nessa faixa, medicamentos como o Mounjaro podem ser considerados com orientação médica, especialmente se dietas e exercícios não trouxeram resultado sustentável.';
+    } else if (imc < 40) {
+      label = 'Obesidade grau II';
+      texto = 'Com IMC nessa faixa, o risco de doenças associadas ao peso é considerável. O uso de medicamentos como Mounjaro geralmente é indicado, com acompanhamento médico.';
+    } else {
+      label = 'Obesidade grau III';
+      texto = 'Essa faixa exige atenção médica especializada. Tratamentos medicamentosos, como o Mounjaro, são frequentemente indicados nesse perfil.';
+    }
+
+    document.getElementById('imcNum').textContent = imcFormatado;
+    document.getElementById('imcLabel').textContent = label;
+    document.getElementById('imcText').textContent = texto;
+
+    const resultDiv = document.getElementById('imcResult');
+    resultDiv.classList.add('show');
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Scroll fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+const navEl=document.querySelector('nav');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>80) navEl.classList.add('scrolled');
+  else navEl.classList.remove('scrolled');
+});
+
+</script>
+
+</body>
+</html>

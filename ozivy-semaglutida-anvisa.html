@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ANVISA aprova Ozivy, primeira semaglutida sintética nacional da EMS. O que muda no preço, acesso e tratamento de obesidade no Brasil. Entenda tudo.">
+<title>ANVISA aprova Ozivy — o primeiro análogo nacional da semaglutida — CorpoNext</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --azul: #1a4fa0;
+  --azul-claro: #2d6fd4;
+  --azul-neon: #5b9cf6;
+  --azul-escuro: #0d1f4a;
+  --azul-medio: #1e3a7a;
+  --creme: #f0f5ff;
+  --creme-escuro: #dce8f8;
+  --branco: #f8faff;
+  --cinza-suave: #6b7a99;
+  --texto: #0d1a35;
+  --texto-suave: #3a4a6b;
+  --verde-destaque: #00A880;
+  --verde-hover: #27B3B8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--branco);color:var(--texto);overflow-x:hidden;font-size:16px;line-height:1.7}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(248,250,255,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--creme-escuro);padding:0 1.25rem;display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo-icon{width:36px;height:36px;background:var(--azul);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-icon svg{width:20px;height:20px}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-name{font-family:'Playfair Display',serif;font-weight:900;font-size:18px;color:var(--azul);letter-spacing:-0.5px}
+.logo-tagline{font-size:9px;font-weight:500;color:var(--cinza-suave);letter-spacing:1.5px;text-transform:uppercase}
+.nav-menu-btn{background:none;border:none;cursor:pointer;padding:6px;display:flex;flex-direction:column;gap:5px}
+.nav-menu-btn span{display:block;width:22px;height:2px;background:var(--texto);border-radius:2px;transition:all .3s}
+.nav-links-desktop{display:none;gap:2rem;list-style:none}
+.nav-links-desktop a{font-size:14px;font-weight:500;color:var(--texto-suave);text-decoration:none;transition:color .2s}
+.nav-links-desktop a:hover{color:var(--verde-destaque)}
+.nav-drawer{position:fixed;top:60px;right:0;width:min(280px,80vw);height:calc(100vh - 60px);background:var(--branco);border-left:1px solid var(--creme-escuro);padding:2rem 1.5rem;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);z-index:99;box-shadow:-8px 0 32px rgba(0,0,0,.08)}
+.nav-drawer.open{transform:translateX(0)}
+.nav-drawer ul{list-style:none}
+.nav-drawer a{display:block;padding:.9rem 0;font-size:18px;font-weight:500;color:var(--texto);text-decoration:none;border-bottom:1px solid var(--creme-escuro);transition:color .2s}
+.nav-drawer a:hover{color:var(--verde-destaque)}
+
+/* ARTICLE HERO */
+.art-hero{background:linear-gradient(160deg,#071a3e 0%,#1a4fa0 45%,#0a1628 100%);padding:88px 1.25rem 2.5rem;position:relative;overflow:hidden}
+.art-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:350px;height:350px;background:radial-gradient(circle,rgba(91,156,246,.12) 0%,transparent 70%);pointer-events:none}
+.breadcrumb{display:flex;align-items:center;gap:6px;margin-bottom:1.25rem;flex-wrap:wrap}
+.breadcrumb a{font-size:12px;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s}
+.breadcrumb a:hover{color:#fff}
+.breadcrumb span{font-size:12px;color:rgba(255,255,255,.3)}
+.breadcrumb-current{font-size:12px;color:rgba(255,255,255,.75);font-weight:500}
+.art-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(0,168,128,.12);border:1px solid rgba(0,168,128,.3);color:var(--verde-destaque);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin-bottom:1.25rem;width:fit-content}
+.art-hero h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(1.9rem,7vw,3.2rem);color:#fff;line-height:1.1;margin-bottom:.75rem;letter-spacing:-1px}
+.art-hero h1 em{font-style:italic;color:#00A880}
+.art-hero-sub{font-size:clamp(.95rem,3vw,1.15rem);color:rgba(255,255,255,.72);font-weight:300;max-width:560px;margin-bottom:1.75rem;line-height:1.6}
+.art-meta{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.art-meta-item{font-size:12px;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:5px}
+.art-meta-dot{width:3px;height:3px;background:rgba(255,255,255,.3);border-radius:50%}
+
+/* ARTICLE BODY */
+.art-body{max-width:720px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+
+/* Progress bar */
+.progress-bar{position:fixed;top:60px;left:0;height:3px;background:var(--azul-claro);width:0%;z-index:99;transition:width .1s linear}
+
+/* Prose styles */
+.art-body h2{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(1.35rem,4.5vw,1.9rem);color:var(--azul-escuro);margin:2.5rem 0 1rem;line-height:1.25;letter-spacing:-.4px}
+.art-body h3{font-size:1.1rem;font-weight:600;color:var(--azul-escuro);margin:2rem 0 .75rem}
+.art-body p{font-size:1.02rem;color:var(--texto-suave);margin-bottom:1.25rem;line-height:1.8}
+.art-body p strong{color:var(--verde-destaque);font-weight:600}
+.art-body ul,.art-body ol{margin:1rem 0 1.5rem 0;padding-left:0;list-style:none}
+.art-body li{font-size:1rem;color:var(--texto-suave);padding:.45rem 0 .45rem 1.75rem;position:relative;line-height:1.65;border-bottom:1px solid rgba(220,232,248,.6)}
+.art-body li:last-child{border-bottom:none}
+.art-body li::before{content:'';position:absolute;left:0;top:.85rem;width:8px;height:8px;background:var(--verde-destaque);border-radius:50%;opacity:.7}
+.art-body ol li{counter-increment:list}
+.art-body ol{counter-reset:list}
+.art-body ol li::before{content:counter(list);background:var(--verde-destaque);color:#fff;font-size:11px;font-weight:700;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;top:.7rem}
+
+/* Callout boxes */
+.callout{border-left:3px solid var(--azul-claro);background:rgba(26,79,160,.06);border-radius:0 12px 12px 0;padding:1.25rem 1.25rem;margin:2rem 0;font-size:1rem;color:var(--texto-suave);line-height:1.7}
+.callout strong{color:var(--verde-destaque);font-weight:600}
+.callout-warning{border-left-color:#e8862a;background:rgba(232,134,42,.06)}
+.callout-warning strong{color:#b5611a}
+.callout-success{border-left-color:var(--verde-destaque);background:rgba(0,168,128,.06)}
+.callout-success strong{color:var(--verde-destaque)}
+
+/* Pull quote */
+.pull-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.2rem,4vw,1.6rem);color:var(--azul-escuro);line-height:1.4;text-align:center;padding:2rem 1rem;margin:2.5rem 0;border-top:1px solid var(--creme-escuro);border-bottom:1px solid var(--creme-escuro);position:relative}
+
+/* Stat cards */
+.stat-row{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin:2rem 0}
+.stat-card{background:#fff;border:1px solid var(--creme-escuro);border-radius:14px;padding:1.1rem;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.stat-num{font-family:'Playfair Display',serif;font-weight:700;font-size:1.8rem;color:var(--verde-destaque);display:block;line-height:1}
+.stat-label{font-size:.82rem;color:var(--cinza-suave);margin-top:.3rem;display:block;font-weight:500}
+
+/* Comparison table */
+.comp-table{width:100%;border-collapse:collapse;margin:2rem 0;font-size:.9rem;border-radius:12px;overflow:hidden;border:1px solid var(--creme-escuro)}
+.comp-table th{background:var(--verde-destaque);color:#fff;padding:.8rem 1rem;text-align:left;font-weight:600;font-size:.85rem}
+.comp-table th:first-child{background:#05614a}
+.comp-table td{padding:.8rem 1rem;border-bottom:1px solid var(--creme-escuro);color:var(--texto-suave)}
+.comp-table tr:last-child td{border-bottom:none}
+.comp-table tr:nth-child(even) td{background:rgba(240,245,255,.5)}
+.comp-table td:first-child{font-weight:600;color:var(--azul-escuro)}
+
+/* Price cards */
+.price-grid{display:grid;grid-template-columns:1fr;gap:.8rem;margin:2rem 0}
+.price-card{background:#fff;border:1px solid var(--creme-escuro);border-radius:14px;padding:1.25rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.price-dose{font-size:.95rem;font-weight:600;color:var(--azul-escuro)}
+.price-dose-sub{font-size:.8rem;color:var(--cinza-suave);margin-top:2px}
+.price-val{font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;color:var(--verde-destaque);white-space:nowrap}
+
+/* Steps */
+.step-list{margin:2rem 0;display:flex;flex-direction:column;gap:0}
+.step{display:flex;gap:1.1rem;padding-bottom:1.75rem;position:relative}
+.step:not(:last-child)::before{content:'';position:absolute;left:18px;top:38px;bottom:0;width:2px;background:linear-gradient(to bottom,var(--azul-claro),transparent)}
+.step-num{width:36px;height:36px;border-radius:50%;background:var(--verde-destaque);color:#fff;font-size:.85rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:1}
+.step-body{flex:1;padding-top:.5rem}
+.step-title{font-size:1rem;font-weight:600;color:var(--azul-escuro);margin-bottom:.35rem}
+.step-text{font-size:.9rem;color:var(--texto-suave);line-height:1.65}
+
+/* CTA block */
+.art-cta{background:linear-gradient(135deg,#071a3e 0%,#1a4fa0 100%);border-radius:18px;padding:2rem 1.5rem;margin:3rem 0;text-align:center;color:#fff}
+.art-cta h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;margin-bottom:.5rem;color:#ffffff}
+.art-cta p{font-size:.9rem;opacity:1;color:#00A880;margin-bottom:1.5rem;line-height:1.6}
+.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#00A880;color:#fff;font-size:15px;font-weight:600;padding:.9rem 1.6rem;border-radius:12px;text-decoration:none;transition:all .2s;border:none;cursor:pointer}
+.btn-primary:hover{background:#27B3B8;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,168,128,.3)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;background:rgba(0,168,128,.12);color:#00A880;font-size:14px;font-weight:600;padding:.75rem 1.4rem;border-radius:10px;text-decoration:none;transition:all .2s;border:2px solid #00A880;margin-top:.6rem}
+.btn-outline:hover{background:rgba(0,168,128,.22);border-color:#27B3B8;color:#27B3B8}
+
+/* Related articles */
+.related{background:var(--creme);padding:2.5rem 1.25rem;border-top:1px solid var(--creme-escuro)}
+.related-title{font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;color:var(--azul-escuro);margin-bottom:1.25rem}
+.related-grid{display:grid;grid-template-columns:1fr;gap:.8rem}
+.related-card{background:#fff;border:1px solid var(--creme-escuro);border-radius:14px;padding:1.1rem 1.25rem;text-decoration:none;display:flex;align-items:center;gap:.9rem;transition:all .25s}
+.related-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.07);border-color:var(--verde-destaque)}
+.related-icon{font-size:1.4rem;flex-shrink:0}
+.related-text{flex:1}
+.related-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--verde-destaque);margin-bottom:.2rem}
+.related-name{font-size:.9rem;font-weight:600;color:var(--azul-escuro);line-height:1.3}
+.related-arrow{color:var(--cinza-suave);font-size:1.1rem;transition:transform .2s}
+.related-card:hover .related-arrow{transform:translateX(3px)}
+
+/* Disclaimer */
+.disclaimer{background:rgba(26,79,160,.05);border-top:1px solid rgba(26,79,160,.12);border-bottom:1px solid rgba(26,79,160,.12);padding:1rem 1.25rem;display:flex;gap:.75rem;align-items:flex-start}
+.disclaimer-icon{font-size:1.1rem;flex-shrink:0;margin-top:2px}
+.disclaimer p{font-size:.78rem;color:var(--texto-suave);line-height:1.55}
+.disclaimer strong{color:var(--azul);font-weight:600}
+
+/* FOOTER */
+footer{background:#0d1f4a;color:rgba(255,255,255,.65);padding:2.5rem 1.25rem 3rem}
+.footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem}
+.footer-logo-icon{width:38px;height:38px;background:var(--azul);border-radius:10px;display:flex;align-items:center;justify-content:center}
+.footer-logo-name{font-family:'Playfair Display',serif;font-size:19px;font-weight:900;color:#fff}
+.footer-desc{font-size:.85rem;line-height:1.65;margin-bottom:1.75rem;max-width:400px}
+.footer-links-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--verde-destaque);margin-bottom:.65rem}
+.footer-links{list-style:none;margin-bottom:1.75rem}
+.footer-links li{margin-bottom:.4rem}
+.footer-links a{font-size:.85rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--verde-destaque)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:1.1rem;font-size:.75rem;color:rgba(255,255,255,.3);line-height:1.6}
+
+/* Sobre / Contato / Privacidade */
+.page-section{padding:2.5rem 1.25rem 4rem;max-width:720px;margin:0 auto}
+.contact-form{display:flex;flex-direction:column;gap:1rem;margin-top:2rem}
+.contact-form input,.contact-form textarea,.contact-form select{width:100%;border:1px solid var(--creme-escuro);border-radius:10px;padding:.8rem 1rem;font-size:.95rem;font-family:'DM Sans',sans-serif;color:var(--texto);background:#fff;outline:none;transition:border-color .2s}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--azul-claro);box-shadow:0 0 0 3px rgba(45,111,212,.1)}
+.contact-form textarea{min-height:130px;resize:vertical}
+.contact-form label{font-size:.82rem;font-weight:600;color:var(--azul-escuro);margin-bottom:2px;display:block}
+.contact-submit{background:#2563eb;color:#fff;border:none;border-radius:12px;padding:1rem;font-size:1rem;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;transition:all .2s}
+.contact-submit:hover{background:var(--verde-hover);transform:translateY(-1px)}
+.team-card{background:#fff;border:1px solid var(--creme-escuro);border-radius:16px;padding:1.5rem;margin:1.5rem 0;display:flex;gap:1.1rem;align-items:flex-start}
+.team-avatar{width:52px;height:52px;border-radius:50%;background:var(--azul);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+
+@media(min-width:768px){
+  .nav-menu-btn{display:none}
+  .nav-links-desktop{display:flex}
+  .nav-drawer{display:none}
+  .art-hero{padding:100px 3rem 3rem}
+  .art-body{padding:3rem 3rem 5rem}
+  .related{padding:3rem 3rem}
+  footer{padding:3rem 3rem 4rem}
+  .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2rem}
+  .stat-row{grid-template-columns:repeat(4,1fr)}
+  .price-grid{grid-template-columns:repeat(2,1fr)}
+  .related-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:1024px){
+  nav{padding:0 4rem}
+  .art-hero{padding:110px 4rem 3.5rem}
+  .art-body{max-width:760px;padding:3.5rem 2rem 6rem}
+}
+
+.fade-in{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.visible{opacity:1;transform:none}
+
+  .logo-img {
+    height: 44px;
+    width: auto;
+    display: block;
+    /* logo has transparent bg - works on light nav */
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.15));
+  }
+</style>
+<style>
+/* Breaking news badge */
+.breaking-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #dc2626;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 1.25rem;
+  width: fit-content;
+  animation: blink-badge 2s ease-in-out infinite;
+}
+.breaking-badge::before {
+  content: '';
+  width: 7px; height: 7px;
+  background: #fff;
+  border-radius: 50%;
+  animation: pulse 1.2s infinite;
+}
+@keyframes blink-badge {
+  0%,100% { box-shadow: 0 0 0 0 rgba(220,38,38,0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(220,38,38,0); }
+}
+@keyframes pulse {
+  0%,100% { opacity:1; transform:scale(1); }
+  50% { opacity:0.5; transform:scale(0.7); }
+}
+/* Timeline */
+.timeline {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-left: 2px solid var(--creme-escuro);
+  padding-left: 1.5rem;
+  margin-left: 0.5rem;
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 1.75rem;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.85rem;
+  top: 0.35rem;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: #00A880;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #00A880;
+}
+.timeline-date {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #00A880;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+.timeline-text {
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+  line-height: 1.6;
+}
+.timeline-text strong { color: var(--azul-escuro); font-weight: 600; }
+/* Comparison table enhanced */
+.comp-table { width:100%;border-collapse:collapse;margin:2rem 0;font-size:.9rem;border-radius:14px;overflow:hidden;border:1px solid var(--creme-escuro) }
+.comp-table th { background:#00A880;color:#fff;padding:.9rem 1rem;text-align:left;font-weight:600;font-size:.85rem }
+.comp-table th:first-child { background:#067a5f }
+.comp-table td { padding:.85rem 1rem;border-bottom:1px solid var(--creme-escuro);color:var(--texto-suave) }
+.comp-table tr:last-child td { border-bottom:none }
+.comp-table tr:nth-child(even) td { background:rgba(0,168,128,.04) }
+.comp-table td:first-child { font-weight:600;color:var(--azul-escuro) }
+/* Key facts box */
+.key-facts {
+  background: linear-gradient(135deg, #071a3e 0%, #1a4fa0 100%);
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+  margin: 2.5rem 0;
+  color: #fff;
+}
+.key-facts h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.key-facts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.key-facts li {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.85);
+  padding-left: 1.4rem;
+  position: relative;
+  border: none;
+  line-height: 1.5;
+}
+.key-facts li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #00A880;
+  font-weight: 700;
+}
+.key-facts li strong { color: #00e8b0; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="CorpoNext" class="logo-img">
+  </a>
+  <ul class="nav-links-desktop">
+    <li><a href="mounjaro-funciona.html">Como funciona</a></li>
+    <li><a href="quanto-custa.html">Preço</a></li>
+    <li><a href="efeitos-colaterais.html">Efeitos</a></li>
+    <li><a href="mounjaro-vs-ozempic.html">Comparativo</a></li>
+  </ul>
+  <button class="nav-menu-btn" id="menuBtn" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <ul>
+    <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+    <li><a href="mounjaro-funciona.html" onclick="closeMenu()">Como funciona</a></li>
+    <li><a href="quanto-custa.html" onclick="closeMenu()">Preço do Mounjaro</a></li>
+    <li><a href="efeitos-colaterais.html" onclick="closeMenu()">Efeitos colaterais</a></li>
+    <li><a href="quantos-kg.html" onclick="closeMenu()">Resultados</a></li>
+    <li><a href="mounjaro-vs-ozempic.html" onclick="closeMenu()">Mounjaro vs Ozempic</a></li>
+    <li><a href="receita.html" onclick="closeMenu()">Receita médica</a></li>
+  </ul>
+</div>
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ARTICLE HERO -->
+<section class="art-hero" style="background:linear-gradient(160deg,#1a0a0a 0%,#6b1212 45%,#1a0808 100%)">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="index.html">Novidades</a>
+    <span>›</span>
+    <span class="breadcrumb-current">ANVISA aprova Ozivy</span>
+  </div>
+  <span class="breaking-badge">🔴 Breaking News</span>
+  <h1>ANVISA aprova o <em>Ozivy</em> — o primeiro análogo nacional da semaglutida</h1>
+  <p class="art-hero-sub">26 de maio de 2026. Laboratório EMS lança o primeiro concorrente brasileiro ao Ozempic após o fim da patente da Novo Nordisk. O que muda para quem busca tratamento de obesidade no Brasil.</p>
+  <div class="art-meta">
+    <span class="art-meta-item">📅 26 de maio de 2026</span>
+    <span class="art-meta-dot"></span>
+    <span class="art-meta-item">⏱ 7 min de leitura</span>
+    <span class="art-meta-dot"></span>
+    <span class="art-meta-item">🔄 Atualizado em tempo real</span>
+  </div>
+</section>
+
+<div class="art-body">
+
+  <div class="key-facts fade-in">
+    <h3>📋 O que você precisa saber agora</h3>
+    <ul>
+      <li><strong>Nome comercial:</strong> Ozivy — desenvolvido pelo laboratório brasileiro EMS/SA</li>
+      <li><strong>Princípio ativo:</strong> Semaglutida sintética — o mesmo do Ozempic e do Wegovy</li>
+      <li><strong>Aprovação:</strong> Resolução ANVISA 2.122/2026, publicada em 26/05/2026</li>
+      <li><strong>Indicação inicial:</strong> Diabetes tipo 2 em adultos</li>
+      <li><strong>Disponibilidade:</strong> Ainda sem data — precisa passar pela CMED antes de chegar às farmácias</li>
+      <li><strong>Preço:</strong> Não definido ainda, mas expectativa de custo menor que o Ozempic original</li>
+    </ul>
+  </div>
+
+  <h2>O que aconteceu hoje</h2>
+  <p>A ANVISA publicou nesta terça-feira, 26 de maio de 2026, o registro do <strong>Ozivy</strong> — a primeira caneta de semaglutida sintética análoga ao Ozempic autorizada para comercialização no Brasil. A aprovação foi publicada no Diário Oficial da União via Resolução 2.122/2026.</p>
+
+  <p>O medicamento foi desenvolvido pelo laboratório <strong>EMS</strong>, uma das maiores farmacêuticas nacionais, e usa o mesmo princípio ativo presente no Ozempic e no Wegovy, da Novo Nordisk. A diferença está na forma de produção: enquanto os originais são medicamentos biológicos, o Ozivy é uma <strong>semaglutida sintética</strong> — produzida por síntese química, e não por processos biotecnológicos complexos.</p>
+
+  <div class="callout callout-success fade-in">
+    <strong>Por que isso é um marco histórico:</strong> o Brasil se torna um dos primeiros países do mundo a registrar uma semaglutida sintética análoga a um produto biológico. Até hoje, todos os medicamentos com semaglutida aprovados no país eram exclusivamente de origem biológica — e todos da Novo Nordisk.
+  </div>
+
+  <h2>Como chegamos até aqui — linha do tempo</h2>
+  <div class="timeline fade-in">
+    <div class="timeline-item">
+      <div class="timeline-date">2018</div>
+      <div class="timeline-text">ANVISA aprova o Ozempic (semaglutida 0,5 mg e 1 mg) para diabetes tipo 2. Novo Nordisk detém exclusividade.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">2021</div>
+      <div class="timeline-text">FDA aprova o Wegovy (semaglutida 2,4 mg) para obesidade nos EUA. Corrida mundial por semaglutida começa.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">2023</div>
+      <div class="timeline-text"><strong>EMS protocola pedido de registro</strong> do Ozivy na ANVISA — dois anos antes do fim da patente.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Julho 2025</div>
+      <div class="timeline-text">ANVISA publica edital priorizando análise de medicamentos GLP-1. Processo de avaliação dos análogos acelera.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">20 de março de 2026</div>
+      <div class="timeline-text"><strong>Patente da semaglutida expira no Brasil.</strong> Caminho aberto para concorrência nacional. Oito outros pedidos de registro em análise.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date" style="color:#dc2626">26 de maio de 2026 — HOJE</div>
+      <div class="timeline-text"><strong>ANVISA aprova o Ozivy</strong> via Resolução 2.122/2026. Primeira semaglutida sintética registrada no país.</div>
+    </div>
+  </div>
+
+  <h2>Ozivy vs Ozempic — as diferenças reais</h2>
+  <p>A aprovação levanta uma dúvida legítima: se usam o mesmo princípio ativo, são iguais? Na prática clínica, sim — e não. Entenda:</p>
+
+  <table class="comp-table fade-in">
+    <thead>
+      <tr>
+        <th>Critério</th>
+        <th>Ozivy (EMS)</th>
+        <th>Ozempic (Novo Nordisk)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Princípio ativo</td><td>Semaglutida sintética</td><td>Semaglutida biológica</td></tr>
+      <tr><td>Mecanismo</td><td>GLP-1 (idêntico)</td><td>GLP-1 (idêntico)</td></tr>
+      <tr><td>Forma de produção</td><td>Síntese química</td><td>Processo biotecnológico</td></tr>
+      <tr><td>Indicação atual</td><td>Diabetes tipo 2</td><td>Diabetes tipo 2 + obesidade</td></tr>
+      <tr><td>Eficácia esperada</td><td>Equivalente</td><td>Comprovada em larga escala</td></tr>
+      <tr><td>Preço esperado</td><td>Potencialmente menor</td><td>R$ 900–1.300/mês</td></tr>
+      <tr><td>Disponibilidade</td><td>Ainda sem data</td><td>Disponível agora</td></tr>
+      <tr><td>Dados clínicos</td><td>Ainda limitados no Brasil</td><td>Mais de 50 mi pacientes globais</td></tr>
+    </tbody>
+  </table>
+
+  <h2>É um genérico do Ozempic?</h2>
+  <p>A resposta curta é: <strong>não tecnicamente</strong>, mas na prática é a comparação mais justa.</p>
+  <p>A regulação brasileira não prevê genéricos para medicamentos biológicos — que é a categoria do Ozempic original. O Ozivy é classificado como <strong>"medicamento novo — análogo sintético de produto biológico"</strong>. Na linguagem popular, sim, é o equivalente a um genérico: mesmo princípio ativo, mesmo mecanismo de ação, produzido por outro laboratório após o fim da exclusividade de patente.</p>
+
+  <div class="callout fade-in">
+    <strong>Analogia simples:</strong> pense no Ozempic como um produto original de marca e no Ozivy como um similar nacional. O ingrediente ativo é idêntico. A diferença está na forma de fabricação e no histórico clínico acumulado — que para o Ozempic original é muito mais extenso.
+  </div>
+
+  <h2>O que muda para quem usa ou quer usar semaglutida</h2>
+
+  <h3>Para diabéticos tipo 2</h3>
+  <p>Essa é a indicação formal do Ozivy por enquanto. Se o medicamento chegar às farmácias com preço significativamente mais baixo, pode ampliar muito o acesso ao tratamento com semaglutida para diabéticos que hoje não conseguem pagar pelo Ozempic original.</p>
+
+  <h3>Para quem busca emagrecimento</h3>
+  <p>Aqui é importante ser preciso: <strong>o Ozivy foi aprovado para diabetes, não para obesidade</strong>. A indicação para emagrecimento (como o Wegovy) exigiria um pedido de registro separado com estudos específicos. Isso provavelmente virá — mas ainda não aconteceu.</p>
+
+  <div class="callout callout-warning fade-in">
+    <strong>Atenção:</strong> o uso do Ozivy para emagrecimento sem diabetes seria off-label — ou seja, fora da indicação aprovada pela ANVISA. Isso não é necessariamente proibido (médicos podem prescrever off-label), mas significa ausência de estudos clínicos específicos para esse uso com este produto. Converse com seu médico.
+  </div>
+
+  <h2>Quando chega às farmácias?</h2>
+  <p>Ainda não há data definida. Antes de ser vendido, o Ozivy precisa passar pela <strong>CMED (Câmara de Regulação do Mercado de Medicamentos)</strong>, que é o órgão responsável por definir o preço máximo de venda. Só depois disso o laboratório EMS decide quando e como fazer o lançamento comercial.</p>
+  <p>Na prática: meses, não semanas. Acompanhe o CorpoNext — publicaremos assim que houver atualização.</p>
+
+  <div class="pull-quote fade-in">
+    "Além do Ozivy, há outras cinco semaglutidas sintéticas e uma biológica em análise na ANVISA. O mercado de GLP-1 no Brasil nunca mais será o mesmo."
+  </div>
+
+  <h2>O que acontece com o Mounjaro nesse cenário?</h2>
+  <p>O Mounjaro (tirzepatida) e a semaglutida são medicamentos diferentes — mecanismo distinto, patente diferente, empresa diferente (Eli Lilly vs Novo Nordisk). A aprovação do Ozivy <strong>não afeta diretamente o Mounjaro</strong>.</p>
+  <p>Na verdade, a chegada de uma alternativa mais acessível à semaglutida pode até beneficiar o Mounjaro indiretamente: quem experimentar o Ozivy e quiser resultados superiores pode migrar para a tirzepatida — que em estudos entrega perda de peso 30–40% maior que a semaglutida.</p>
+
+  <h2>O que mais está por vir</h2>
+  <p>A ANVISA sinalizou que há outros <strong>oito pedidos de registro de semaglutida</strong> em análise, e nove aguardando início de avaliação. Nos próximos meses, é provável que mais laboratórios recebam aprovação — o que criará competição real de preço pela primeira vez no mercado brasileiro de GLP-1.</p>
+  <p>Para quem acompanha esse mercado, isso é o início de uma transformação no acesso a medicamentos de emagrecimento no Brasil. Ainda há caminho longo, mas a porta foi aberta hoje.</p>
+
+  <div class="art-cta fade-in">
+    <h3>Quer entender a diferença entre semaglutida e tirzepatida?</h3>
+    <p>Veja nosso comparativo completo entre Mounjaro e Ozempic — e descubra qual faz mais sentido para o seu perfil.</p>
+    <a href="mounjaro-vs-ozempic.html" class="btn-primary">Mounjaro vs Ozempic — comparativo completo →</a><br>
+    <a href="mounjaro-funciona.html" class="btn-outline">Como o Mounjaro funciona</a>
+  </div>
+
+</div>
+
+<!-- Related -->
+<section class="related">
+  <div class="related-title">Leia também</div>
+  <div class="related-grid">
+    <a href="mounjaro-vs-ozempic.html" class="related-card">
+      <span class="related-icon">⚖️</span>
+      <div class="related-text">
+        <div class="related-label">Comparativo</div>
+        <div class="related-name">Mounjaro vs Ozempic — qual escolher?</div>
+      </div>
+      <span class="related-arrow">›</span>
+    </a>
+    <a href="mounjaro-funciona.html" class="related-card">
+      <span class="related-icon">🔬</span>
+      <div class="related-text">
+        <div class="related-label">Eficácia</div>
+        <div class="related-name">Mounjaro realmente funciona?</div>
+      </div>
+      <span class="related-arrow">›</span>
+    </a>
+    <a href="quanto-custa.html" class="related-card">
+      <span class="related-icon">💰</span>
+      <div class="related-text">
+        <div class="related-label">Custo</div>
+        <div class="related-name">Quanto custa o Mounjaro em 2026?</div>
+      </div>
+      <span class="related-arrow">›</span>
+    </a>
+    <a href="efeitos-colaterais.html" class="related-card">
+      <span class="related-icon">⚠️</span>
+      <div class="related-text">
+        <div class="related-label">Segurança</div>
+        <div class="related-name">Efeitos colaterais da tirzepatida</div>
+      </div>
+      <span class="related-arrow">›</span>
+    </a>
+  </div>
+</section>
+
+<div class="disclaimer">
+  <span class="disclaimer-icon">🩺</span>
+  <p><strong>Aviso médico:</strong> As informações deste site têm caráter educativo. Não substituem consulta, diagnóstico ou prescrição médica. Sempre consulte um profissional de saúde antes de iniciar qualquer tratamento.</p>
+</div>
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">
+        <img src="logo.png" alt="CorpoNext" style="height:52px;width:auto;filter:brightness(1.1) drop-shadow(0 2px 6px rgba(0,0,0,0.3))">
+      </div>
+      <p class="footer-desc">Informação séria sobre emagrecimento com Mounjaro para quem já tentou de tudo. Conteúdo educativo, sem venda de medicamentos.</p>
+    </div>
+    <div>
+      <div class="footer-links-title">Conteúdos</div>
+      <ul class="footer-links">
+        <li><a href="mounjaro-funciona.html">Mounjaro funciona?</a></li>
+        <li><a href="quanto-custa.html">Preço do Mounjaro</a></li>
+        <li><a href="efeitos-colaterais.html">Efeitos colaterais</a></li>
+        <li><a href="quantos-kg.html">Quantos kg perder?</a></li>
+        <li><a href="mounjaro-vs-ozempic.html">Mounjaro vs Ozempic</a></li>
+        <li><a href="receita.html">Receita médica</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-links-title">Institucional</div>
+      <ul class="footer-links">
+        <li><a href="sobre-nos.html">Sobre nós</a></li>
+        <li><a href="politica-privacidade.html">Política de privacidade</a></li>
+        <li><a href="disclaimer.html">Termos e disclaimer</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 CorpoNext. Todos os direitos reservados.<br>
+    As informações deste site são de caráter educativo e não substituem orientação médica profissional.
+  </div>
+</footer>
+
+</body>
+</html>
